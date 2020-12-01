@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+{{ form_start(form) }}
+    {{ form_row(form.texte) }}
+
+    <h3> Les Options </h3>
+    <ul >
+        {% for tag in form.options %}
+            <li>{{ form_row(tag)  }}</li>
+        {% endfor %}
+    </ul>
+    
+
+
+
+
+{{ form_end(form) }}
+                        {% endblock %}
